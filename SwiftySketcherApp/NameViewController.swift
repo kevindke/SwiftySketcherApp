@@ -11,6 +11,7 @@ import Firebase
 
 class NameViewController: UIViewController {
     
+    var sessionKey:String!
     var creatingSession:Bool = false;
     
     @IBOutlet var nameField: UITextField!
@@ -20,15 +21,9 @@ class NameViewController: UIViewController {
         //if true, create a new session
         if self.creatingSession {
             
-            //Create new session key in Firebase
-            let newSession = FIRDatabase.database().reference().child("Sessions").childByAutoId()
-            //Passing the unique Id of the device to creator field
-            let deviceUniqID:String = UIDevice.currentDevice().identifierForVendor!.UUIDString
-            
-            newSession.child("CreatorDevice").setValue(deviceUniqID)
-            newSession.child("CreatorName").setValue(nameField.text)
+            let ref = FIRDatabase.database().reference().child("Sessions").child(self.sessionKey)
+            ref.child("CreatorName").setValue(nameField.text)
         
-            
         
         }
         //if false, join an existing session

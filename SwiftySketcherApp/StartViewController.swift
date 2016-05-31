@@ -19,10 +19,19 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var tableView: UITableView!
     
     @IBAction func createNewSession(sender: AnyObject) {
+        //Create new session key in Firebase
+        let newSession = FIRDatabase.database().reference().child("Sessions").childByAutoId()
+        //Passing the unique Id of the device to creator field
+        let deviceUniqID:String = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
+        newSession.child("CreatorDevice").setValue(deviceUniqID)
+        newSession.child("CreatorName").setValue("New session being created")
+        newSession.child("GameOn").setValue(false)
         
         let nameViewController = storyboard?.instantiateViewControllerWithIdentifier("nameScreen") as! NameViewController
         
         nameViewController.creatingSession = true
+        nameViewController.sessionKey = newSession.key
         
         
         self.presentViewController(nameViewController, animated: true, completion: nil)
@@ -92,7 +101,11 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
                 style: UITableViewCellStyle.Default,
                 reuseIdentifier: sessionsTableIdentifier)
         }
+        
+        
         cell?.textLabel?.text = self.sessions[indexPath.row]["CreatorName"] as! String
+        
+        
         return cell!
     }
 
