@@ -12,6 +12,7 @@
 		C98223D71CFD1C4200C267D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98223D51CFD1C4200C267D9 /* Main.storyboard */; };
 		C98223D91CFD1C4200C267D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98223D81CFD1C4200C267D9 /* Assets.xcassets */; };
 		C98223DC1CFD1C4200C267D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98223DA1CFD1C4200C267D9 /* LaunchScreen.storyboard */; };
+		C98223E41CFD1D1600C267D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		C98223D81CFD1C4200C267D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98223DB1CFD1C4200C267D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98223DD1CFD1C4200C267D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C98223D51CFD1C4200C267D9 /* Main.storyboard */,
 				C98223D81CFD1C4200C267D9 /* Assets.xcassets */,
 				C98223DA1CFD1C4200C267D9 /* LaunchScreen.storyboard */,
+				C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */,
 				C98223DD1CFD1C4200C267D9 /* Info.plist */,
 			);
 			path = SwiftySketcherApp;
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C98223DC1CFD1C4200C267D9 /* LaunchScreen.storyboard in Resources */,
+				C98223E41CFD1D1600C267D9 /* GoogleService-Info.plist in Resources */,
 				C98223D91CFD1C4200C267D9 /* Assets.xcassets in Resources */,
 				C98223D71CFD1C4200C267D9 /* Main.storyboard in Resources */,
 			);
