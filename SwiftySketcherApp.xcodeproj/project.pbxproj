@@ -14,6 +14,8 @@
 		C98223D91CFD1C4200C267D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C98223D81CFD1C4200C267D9 /* Assets.xcassets */; };
 		C98223DC1CFD1C4200C267D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98223DA1CFD1C4200C267D9 /* LaunchScreen.storyboard */; };
 		C98223E41CFD1D1600C267D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */; };
+		C98D5D8B1CFD35F100A83933 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D5D8A1CFD35F100A83933 /* StartViewController.swift */; };
+		C98D5D8D1CFD3AC700A83933 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		C98223DB1CFD1C4200C267D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98223DD1CFD1C4200C267D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C98D5D8A1CFD35F100A83933 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				C98223DA1CFD1C4200C267D9 /* LaunchScreen.storyboard */,
 				C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */,
 				C98223DD1CFD1C4200C267D9 /* Info.plist */,
+				C98D5D8A1CFD35F100A83933 /* StartViewController.swift */,
+				C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */,
 			);
 			path = SwiftySketcherApp;
 			sourceTree = "<group>";
@@ -217,6 +223,8 @@
 			files = (
 				C98223D41CFD1C4200C267D9 /* ViewController.swift in Sources */,
 				C98223D21CFD1C4200C267D9 /* AppDelegate.swift in Sources */,
+				C98D5D8B1CFD35F100A83933 /* StartViewController.swift in Sources */,
+				C98D5D8D1CFD3AC700A83933 /* NameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
