@@ -16,6 +16,7 @@
 		C98223E41CFD1D1600C267D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */; };
 		C98D5D8B1CFD35F100A83933 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D5D8A1CFD35F100A83933 /* StartViewController.swift */; };
 		C98D5D8D1CFD3AC700A83933 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */; };
+		C98D5D911CFD407B00A83933 /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98D5D901CFD407B00A83933 /* WaitingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C98223E31CFD1D1600C267D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C98D5D8A1CFD35F100A83933 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		C98D5D901CFD407B00A83933 /* WaitingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				C98223DD1CFD1C4200C267D9 /* Info.plist */,
 				C98D5D8A1CFD35F100A83933 /* StartViewController.swift */,
 				C98D5D8C1CFD3AC700A83933 /* NameViewController.swift */,
+				C98D5D901CFD407B00A83933 /* WaitingViewController.swift */,
 			);
 			path = SwiftySketcherApp;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C98D5D911CFD407B00A83933 /* WaitingViewController.swift in Sources */,
 				C98223D41CFD1C4200C267D9 /* ViewController.swift in Sources */,
 				C98223D21CFD1C4200C267D9 /* AppDelegate.swift in Sources */,
 				C98D5D8B1CFD35F100A83933 /* StartViewController.swift in Sources */,

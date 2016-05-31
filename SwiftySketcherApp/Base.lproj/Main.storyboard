@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Start View Controller-->
@@ -55,17 +56,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-ee-BWH">
-                                <rect key="frame" x="160" y="500" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="BSP-Bc-8p3"/>
-                                    <constraint firstAttribute="height" constant="50" id="c9A-yL-0Qy"/>
-                                </constraints>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n4J-qP-VU9">
                                 <rect key="frame" x="160" y="285" width="280" height="30"/>
                                 <constraints>
@@ -81,6 +71,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-ee-BWH">
+                                <rect key="frame" x="160" y="500" width="280" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="BSP-Bc-8p3"/>
+                                    <constraint firstAttribute="height" constant="50" id="c9A-yL-0Qy"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3Qq-wO-wKq" kind="show" id="U4c-2x-Tf9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -96,6 +100,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgZ-tB-egh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2032" y="526"/>
+        </scene>
+        <!--Waiting View Controller-->
+        <scene sceneID="hND-aD-WUF">
+            <objects>
+                <viewController storyboardIdentifier="waitingScreen" id="3Qq-wO-wKq" customClass="WaitingViewController" customModule="SwiftySketcherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cs2-49-sAF"/>
+                        <viewControllerLayoutGuide type="bottom" id="tqq-83-nQj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZAo-6N-9HX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TX0-P6-pSH">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qQi-eN-UuT"/>
+                                    <barButtonItem title="Start" id="DHF-j3-KrK"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLB-LI-Qz1">
+                                <rect key="frame" x="286" y="270" width="28" height="60"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of players here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-4Z-QMO">
+                                <rect key="frame" x="193" y="235" width="215" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="In order to start, there must be an even number of players including you." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-EE-cYR">
+                                <rect key="frame" x="151" y="354" width="300" height="100"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="mOa-ZR-iBc"/>
+                                    <constraint firstAttribute="width" constant="300" id="ydd-RX-BMX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hLB-LI-Qz1" firstAttribute="top" secondItem="JFb-4Z-QMO" secondAttribute="bottom" constant="14" id="9cR-wK-kwW"/>
+                            <constraint firstItem="JFb-4Z-QMO" firstAttribute="centerX" secondItem="ZAo-6N-9HX" secondAttribute="centerX" id="Chc-3L-Knj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TX0-P6-pSH" secondAttribute="trailing" constant="-20" id="CwY-kp-Ll7"/>
+                            <constraint firstItem="YaR-EE-cYR" firstAttribute="centerX" secondItem="ZAo-6N-9HX" secondAttribute="centerX" id="Hbe-jM-Fzo"/>
+                            <constraint firstItem="TX0-P6-pSH" firstAttribute="leading" secondItem="ZAo-6N-9HX" secondAttribute="leadingMargin" constant="-20" id="RyW-VG-omY"/>
+                            <constraint firstItem="YaR-EE-cYR" firstAttribute="top" secondItem="hLB-LI-Qz1" secondAttribute="bottom" constant="24" id="VX1-OL-Gh1"/>
+                            <constraint firstItem="tqq-83-nQj" firstAttribute="top" secondItem="TX0-P6-pSH" secondAttribute="bottom" id="cfF-wk-6bv"/>
+                            <constraint firstItem="hLB-LI-Qz1" firstAttribute="centerY" secondItem="ZAo-6N-9HX" secondAttribute="centerY" id="uk9-j2-4qI"/>
+                            <constraint firstItem="hLB-LI-Qz1" firstAttribute="centerX" secondItem="ZAo-6N-9HX" secondAttribute="centerX" id="wNC-gS-oMc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFw-3Q-s9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2802" y="526"/>
         </scene>
     </scenes>
 </document>
