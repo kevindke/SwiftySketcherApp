@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5880F53064F3A0A8E95745 /* Pods_SwiftySketcherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6755C6043F3587BF386A2A01 /* Pods_SwiftySketcherApp.framework */; };
 		C98223D21CFD1C4200C267D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98223D11CFD1C4200C267D9 /* AppDelegate.swift */; };
 		C98223D41CFD1C4200C267D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98223D31CFD1C4200C267D9 /* ViewController.swift */; };
 		C98223D71CFD1C4200C267D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C98223D51CFD1C4200C267D9 /* Main.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17EC7A925009B3DD3B8EC73D /* Pods-SwiftySketcherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySketcherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySketcherApp/Pods-SwiftySketcherApp.release.xcconfig"; sourceTree = "<group>"; };
+		6755C6043F3587BF386A2A01 /* Pods_SwiftySketcherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftySketcherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C570889C75D947A75C44348A /* Pods-SwiftySketcherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftySketcherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftySketcherApp/Pods-SwiftySketcherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C98223CE1CFD1C4200C267D9 /* SwiftySketcherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftySketcherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98223D11CFD1C4200C267D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C98223D31CFD1C4200C267D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5880F53064F3A0A8E95745 /* Pods_SwiftySketcherApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6118E967904449A509B33488 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C570889C75D947A75C44348A /* Pods-SwiftySketcherApp.debug.xcconfig */,
+				17EC7A925009B3DD3B8EC73D /* Pods-SwiftySketcherApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72F76F6FEB9B1026BA95BA5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6755C6043F3587BF386A2A01 /* Pods_SwiftySketcherApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C98223C51CFD1C4200C267D9 = {
 			isa = PBXGroup;
 			children = (
 				C98223D01CFD1C4200C267D9 /* SwiftySketcherApp */,
 				C98223CF1CFD1C4200C267D9 /* Products */,
+				6118E967904449A509B33488 /* Pods */,
+				72F76F6FEB9B1026BA95BA5F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C98223E01CFD1C4200C267D9 /* Build configuration list for PBXNativeTarget "SwiftySketcherApp" */;
 			buildPhases = (
+				936DA240A534A6364A53D0B5 /* 📦 Check Pods Manifest.lock */,
 				C98223CA1CFD1C4200C267D9 /* Sources */,
 				C98223CB1CFD1C4200C267D9 /* Frameworks */,
 				C98223CC1CFD1C4200C267D9 /* Resources */,
+				598CF7A396F8A8DE68C45C2C /* 📦 Embed Pods Frameworks */,
+				AABC993063743A222E906750 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		598CF7A396F8A8DE68C45C2C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySketcherApp/Pods-SwiftySketcherApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		936DA240A534A6364A53D0B5 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AABC993063743A222E906750 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftySketcherApp/Pods-SwiftySketcherApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C98223CA1CFD1C4200C267D9 /* Sources */ = {
@@ -252,12 +327,14 @@
 		};
 		C98223E11CFD1C4200C267D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C570889C75D947A75C44348A /* Pods-SwiftySketcherApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftySketcherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shijir99.SwiftySketcherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -266,12 +343,14 @@
 		};
 		C98223E21CFD1C4200C267D9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17EC7A925009B3DD3B8EC73D /* Pods-SwiftySketcherApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SwiftySketcherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shijir99.SwiftySketcherApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -297,6 +376,7 @@
 				C98223E21CFD1C4200C267D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
