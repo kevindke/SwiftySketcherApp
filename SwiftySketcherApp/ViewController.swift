@@ -11,6 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
     
+    @IBAction func DoneButton(sender: AnyObject) {
+        
+        FIRDatabase.database().reference().childByAutoId().setValue("Awesome")
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
