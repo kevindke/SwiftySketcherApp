@@ -18,25 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBj-70-Rpy">
-                                <rect key="frame" x="160" y="500" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="To2-Z1-r4u"/>
-                                    <constraint firstAttribute="width" constant="280" id="a3z-WE-rxV"/>
-                                </constraints>
-                                <state key="normal" title="Create a new session">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Zk0-1O-LqE" kind="show" id="eI6-Cf-JzN"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQE-An-pNF">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pJa-7e-WAH"/>
+                                    <barButtonItem title="New" id="jCB-yx-yGC">
+                                        <connections>
+                                            <segue destination="Zk0-1O-LqE" kind="show" id="zen-h1-I6E"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zBj-70-Rpy" firstAttribute="centerX" secondItem="COM-Y5-Xj1" secondAttribute="centerX" id="giG-rN-q3O"/>
-                            <constraint firstItem="vaY-ay-elS" firstAttribute="top" secondItem="zBj-70-Rpy" secondAttribute="bottom" constant="50" id="mZO-ip-vso"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IQE-An-pNF" secondAttribute="trailing" constant="-20" id="77J-8G-oTk"/>
+                            <constraint firstItem="vaY-ay-elS" firstAttribute="top" secondItem="IQE-An-pNF" secondAttribute="bottom" id="fEh-Ee-zrG"/>
+                            <constraint firstItem="IQE-An-pNF" firstAttribute="leading" secondItem="COM-Y5-Xj1" secondAttribute="leadingMargin" constant="-20" id="taI-YR-6Ec"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -71,26 +69,24 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAr-ee-BWH">
-                                <rect key="frame" x="160" y="500" width="280" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="BSP-Bc-8p3"/>
-                                    <constraint firstAttribute="height" constant="50" id="c9A-yL-0Qy"/>
-                                </constraints>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3Qq-wO-wKq" kind="show" id="U4c-2x-Tf9"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdZ-xf-Hcf">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="LZf-Vv-Rtf"/>
+                                    <barButtonItem title="Done" id="yXi-9H-Ujp">
+                                        <connections>
+                                            <segue destination="3Qq-wO-wKq" kind="show" id="UCd-Jp-BOv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="b4m-IE-3qB" firstAttribute="top" secondItem="QAr-ee-BWH" secondAttribute="bottom" constant="50" id="6CT-Qm-fov"/>
+                            <constraint firstItem="b4m-IE-3qB" firstAttribute="top" secondItem="JdZ-xf-Hcf" secondAttribute="bottom" id="4yR-QE-weL"/>
+                            <constraint firstItem="JdZ-xf-Hcf" firstAttribute="leading" secondItem="F3h-mf-g8Y" secondAttribute="leadingMargin" constant="-20" id="8On-kb-eVK"/>
                             <constraint firstItem="n4J-qP-VU9" firstAttribute="centerY" secondItem="F3h-mf-g8Y" secondAttribute="centerY" id="Cbu-Bp-Yn9"/>
-                            <constraint firstItem="QAr-ee-BWH" firstAttribute="centerX" secondItem="F3h-mf-g8Y" secondAttribute="centerX" id="J7J-ZZ-CTd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JdZ-xf-Hcf" secondAttribute="trailing" constant="-20" id="Q1g-35-7VR"/>
                             <constraint firstItem="n4J-qP-VU9" firstAttribute="centerX" secondItem="F3h-mf-g8Y" secondAttribute="centerX" id="oFB-jh-caq"/>
                             <constraint firstItem="sHv-ZR-HJG" firstAttribute="leading" secondItem="n4J-qP-VU9" secondAttribute="leading" id="qId-lV-k68"/>
                             <constraint firstItem="n4J-qP-VU9" firstAttribute="top" secondItem="sHv-ZR-HJG" secondAttribute="bottom" constant="17" id="wBo-br-e75"/>
