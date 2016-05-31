@@ -29,13 +29,36 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No session to join. Create a new one." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-ts-JjG">
+                                <rect key="frame" x="0.0" y="54" width="600" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ROH-qt-69T">
+                                <rect key="frame" x="0.0" y="83" width="600" height="473"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="IQE-An-pNF" secondAttribute="trailing" constant="-20" id="77J-8G-oTk"/>
+                            <constraint firstItem="ROH-qt-69T" firstAttribute="leading" secondItem="COM-Y5-Xj1" secondAttribute="leadingMargin" constant="-20" id="B5W-An-ds2"/>
+                            <constraint firstItem="r9A-ts-JjG" firstAttribute="leading" secondItem="COM-Y5-Xj1" secondAttribute="leadingMargin" constant="-20" id="QTn-jx-AaB"/>
+                            <constraint firstItem="r9A-ts-JjG" firstAttribute="top" secondItem="h6R-hk-v1N" secondAttribute="bottom" constant="34" id="ZUr-3l-jQB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r9A-ts-JjG" secondAttribute="trailing" constant="-20" id="aWZ-em-YTc"/>
                             <constraint firstItem="vaY-ay-elS" firstAttribute="top" secondItem="IQE-An-pNF" secondAttribute="bottom" id="fEh-Ee-zrG"/>
+                            <constraint firstItem="IQE-An-pNF" firstAttribute="top" secondItem="ROH-qt-69T" secondAttribute="bottom" id="kzo-sz-ehf"/>
+                            <constraint firstItem="ROH-qt-69T" firstAttribute="top" secondItem="r9A-ts-JjG" secondAttribute="bottom" constant="8" id="lWn-td-cQ0"/>
+                            <constraint firstItem="r9A-ts-JjG" firstAttribute="top" secondItem="h6R-hk-v1N" secondAttribute="bottom" constant="8" id="ppG-x8-BRF"/>
                             <constraint firstItem="IQE-An-pNF" firstAttribute="leading" secondItem="COM-Y5-Xj1" secondAttribute="leadingMargin" constant="-20" id="taI-YR-6Ec"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ROH-qt-69T" secondAttribute="trailing" constant="-20" id="yaP-gH-pJg"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ppG-x8-BRF"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je5-UA-JjV" userLabel="First Responder" sceneMemberID="firstResponder"/>
