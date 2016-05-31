@@ -24,12 +24,12 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="pJa-7e-WAH"/>
                                     <barButtonItem title="New" id="jCB-yx-yGC">
                                         <connections>
-                                            <segue destination="Zk0-1O-LqE" kind="show" id="zen-h1-I6E"/>
+                                            <action selector="createNewSession:" destination="l91-qG-jS9" id="Imd-rp-nfs"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No session to join. Create a new one." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-ts-JjG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading data..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-ts-JjG">
                                 <rect key="frame" x="0.0" y="54" width="600" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,7 +106,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LZf-Vv-Rtf"/>
                                     <barButtonItem title="Done" id="yXi-9H-Ujp">
                                         <connections>
-                                            <segue destination="3Qq-wO-wKq" kind="show" id="UCd-Jp-BOv"/>
+                                            <action selector="nameEntered:" destination="Zk0-1O-LqE" id="til-86-aVG"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -123,6 +123,9 @@
                             <constraint firstItem="n4J-qP-VU9" firstAttribute="top" secondItem="sHv-ZR-HJG" secondAttribute="bottom" constant="17" id="wBo-br-e75"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="n4J-qP-VU9" id="FuJ-wR-TIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgZ-tB-egh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -154,13 +157,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The number of players here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-4Z-QMO">
-                                <rect key="frame" x="193" y="235" width="215" height="21"/>
+                                <rect key="frame" x="192.5" y="235" width="215" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="In order to start, there must be an even number of players including you." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-EE-cYR">
-                                <rect key="frame" x="151" y="354" width="300" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="In order to start, there must be an even number of players including you." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaR-EE-cYR">
+                                <rect key="frame" x="150.5" y="354" width="300" height="100"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="mOa-ZR-iBc"/>

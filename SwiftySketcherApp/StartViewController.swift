@@ -18,10 +18,18 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet var sessionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
     
+    @IBAction func createNewSession(sender: AnyObject) {
+        
+        let nameViewController = storyboard?.instantiateViewControllerWithIdentifier("nameScreen") as! NameViewController
+        
+        nameViewController.creatingSession = true
+        
+        
+        self.presentViewController(nameViewController, animated: true, completion: nil)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
     
     }
     
@@ -38,8 +46,11 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
             if snapshot.exists()  {
             
                 let fbSessions = snapshot.value as! [String: AnyObject]
-                self.sessions = Array(fbSessions.values)
                 
+                
+                self.sessions = Array(fbSessions.values)
+                print(self.sessions)
+
                 if self.sessions.count==1 {
                     
                     self.sessionLabel.text = "There is a session."
@@ -81,7 +92,7 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
                 style: UITableViewCellStyle.Default,
                 reuseIdentifier: sessionsTableIdentifier)
         }
-        cell?.textLabel?.text = self.sessions[indexPath.row] as! String
+        cell?.textLabel?.text = self.sessions[indexPath.row]["CreatorName"] as! String
         return cell!
     }
 
