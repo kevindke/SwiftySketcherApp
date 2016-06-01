@@ -11,9 +11,11 @@ import Firebase
 
 class StartViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var sessions = []
+    typealias sessionTuple = (sessionKey: String, creatorName: String, creatorDevice: String, gameOn: Bool)
+    var sessions = [sessionTuple]()
     let sessionsTableIdentifier = "sessionsTableIdentifier"
     var tableViewController = UITableViewController(style: .Plain)
+    let deviceUniqID:String = UIDevice.currentDevice().identifierForVendor!.UUIDString
 
     @IBOutlet var sessionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
@@ -22,7 +24,7 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
         //Create new session key in Firebase
         let newSession = FIRDatabase.database().reference().child("Sessions").childByAutoId()
         //Passing the unique Id of the device to creator field
-        let deviceUniqID:String = UIDevice.currentDevice().identifierForVendor!.UUIDString
+        
         
         newSession.child("CreatorDevice").setValue(deviceUniqID)
         newSession.child("CreatorName").setValue("New session being created")
@@ -59,8 +61,23 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let fbSessions = snapshot.value as! [String: AnyObject]
                 
                 
-                self.sessions = Array(fbSessions.values)
-                print(self.sessions)
+                for sessionData in fbSessions {
+                
+                    let _sessionKey = sessionData.0
+                    let _creatorName = sessionData.1["CreatorName"] as! String
+                    let _creatorDevice = sessionData.1["CreatorDevice"] as! String
+                    let _gameOn = sessionData.1["GameOn"] as! Bool
+                    
+                    let _sessionTuple = sessionTuple(_sessionKey,_creatorName,_creatorDevice,_gameOn)
+                    
+                
+
+                    self.sessions.append(_sessionTuple)
+                    //Array(fbSessions.values)
+                
+                }
+                
+                
 
                 if self.sessions.count==1 {
                     
@@ -105,10 +122,25 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         
         
-        cell?.textLabel?.text = self.sessions[indexPath.row]["CreatorName"] as! String
+        cell?.textLabel?.text = self.sessions[indexPath.row].creatorName
         
         
         return cell!
+    }
+    //selecting tableRow
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        
+        let nameViewController = storyboard?.instantiateViewControllerWithIdentifier("nameScreen") as! NameViewController
+        
+        nameViewController.creatingSession = false
+        nameViewController.sessionKey = self.sessions[indexPath.row].sessionKey
+        nameViewController.deviceID = deviceUniqID
+        
+        self.presentViewController(nameViewController, animated: true, completion: nil)
+        
+        
     }
 
 
