@@ -12,6 +12,7 @@ import Firebase
 class NameViewController: UIViewController {
     
     var sessionKey:String!
+    var deviceID:String!
     var creatingSession:Bool = false;
     
     @IBOutlet var nameField: UITextField!
@@ -23,6 +24,11 @@ class NameViewController: UIViewController {
             
             let ref = FIRDatabase.database().reference().child("Sessions").child(self.sessionKey)
             ref.child("CreatorName").setValue(nameField.text)
+            ref.child("Players").child(self.deviceID).child("PlayerName").setValue(nameField.text)
+            
+            let waitingViewController = storyboard?.instantiateViewControllerWithIdentifier("waitingScreen") as! WaitingViewController
+            
+            self.presentViewController(waitingViewController, animated: true, completion: nil)
         
         
         }

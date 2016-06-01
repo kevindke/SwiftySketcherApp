@@ -26,12 +26,14 @@ class StartViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         newSession.child("CreatorDevice").setValue(deviceUniqID)
         newSession.child("CreatorName").setValue("New session being created")
+        newSession.child("Players").child(deviceUniqID).child("PlayerName").setValue("_")
         newSession.child("GameOn").setValue(false)
         
         let nameViewController = storyboard?.instantiateViewControllerWithIdentifier("nameScreen") as! NameViewController
         
         nameViewController.creatingSession = true
         nameViewController.sessionKey = newSession.key
+        nameViewController.deviceID = deviceUniqID
         
         
         self.presentViewController(nameViewController, animated: true, completion: nil)
